@@ -1,72 +1,181 @@
 /* ===================================
-   人生RPG v3.0.1 Alpha001
+   人生RPG Alpha003
 =================================== */
 
-console.log("人生RPG v3.0.1 啟動成功");
-alert("script.js 已載入");
+console.log("人生RPG Alpha003 啟動");
 
-// -----------------------------
-// 網站淡入
-// -----------------------------
-window.addEventListener("load", function () {
+/* ===== 淡入 ===== */
+
+window.addEventListener("load", () => {
+
     document.body.style.opacity = "0";
 
-    setTimeout(function () {
-        document.body.style.transition = "opacity 0.8s";
+    setTimeout(() => {
+
+        document.body.style.transition = "opacity .8s";
+
         document.body.style.opacity = "1";
-    }, 100);
+
+    },100);
+
 });
 
-// -----------------------------
-// 取得暱稱
-// -----------------------------
+/* ===== 暱稱 ===== */
+
 let nickname = localStorage.getItem("lifeNickname");
 
-// 第一次使用
-if (!nickname) {
+if(!nickname){
 
-    nickname = prompt("歡迎來到人生RPG\n\n請輸入你的暱稱：");
+    nickname = prompt("歡迎來到人生RPG\n\n請輸入你的暱稱");
 
-    if (!nickname || nickname.trim() === "") {
-        nickname = "努力成長的大叔";
+    if(!nickname || nickname.trim()==""){
+
+        nickname="努力成長的大叔";
+
     }
 
-    localStorage.setItem("lifeNickname", nickname);
+    localStorage.setItem("lifeNickname",nickname);
+
 }
 
-// -----------------------------
-// 顯示暱稱
-// -----------------------------
-const nicknameElement = document.getElementById("nickname");
+document.getElementById("nickname").innerText=nickname;
 
-if (nicknameElement) {
-    nicknameElement.innerText = nickname;
-} else {
-    alert("找不到 nickname");
+/* ===== 人生宣言 ===== */
+
+let quote = localStorage.getItem("lifeQuote");
+
+if(!quote){
+
+    quote = prompt("請輸入你的人生宣言");
+
+    if(!quote || quote.trim()==""){
+
+        quote="人生，不需要打怪。\n而是超越昨天的自己。";
+
+    }
+
+    localStorage.setItem("lifeQuote",quote);
+
 }
 
-// -----------------------------
-// 人生等級
-// -----------------------------
-const levelElement = document.getElementById("life-level");
+document.getElementById("lifeQuote").innerText=quote;
 
-if (levelElement) {
-    levelElement.innerText = "Lv.1";
-}
+/* ===== 人生 Level ===== */
 
-// -----------------------------
-// 卡片點擊
-// -----------------------------
-const cards = document.querySelectorAll(".card");
+document.getElementById("life-level").innerText="Lv.1";
 
-cards.forEach(function(card){
+/* ===== 任務 ===== */
 
-    card.addEventListener("click",function(){
+let tasks = JSON.parse(localStorage.getItem("lifeTasks")) || [];
 
-        const title = card.querySelector("h3").innerText;
+const input = document.getElementById("taskInput");
 
-        alert("【" + title + "】\n\n功能開發中...");
+const button = document.getElementById("addTask");
+
+const list = document.getElementById("taskList");
+
+/* ===== 顯示任務 ===== */
+
+function renderTasks(){
+
+    list.innerHTML="";
+
+    tasks.forEach((task,index)=>{
+
+        const li=document.createElement("li");
+
+        const checkbox=document.createElement("input");
+
+        checkbox.type="checkbox";
+
+        checkbox.checked=task.done;
+
+        checkbox.onchange=()=>{
+
+            task.done=checkbox.checked;
+
+            saveTasks();
+
+            renderTasks();
+
+        };
+
+        const span=document.createElement("span");
+
+        span.innerText=task.text;
+
+        if(task.done){
+
+            span.classList.add("completed");
+
+        }
+
+        li.appendChild(checkbox);
+
+        li.appendChild(span);
+
+        list.appendChild(li);
 
     });
 
+}
+
+/* ===== 新增任務 ===== */
+
+button.addEventListener("click",()=>{
+
+    const text=input.value.trim();
+
+    if(text=="") return;
+
+    tasks.push({
+
+        text:text,
+
+        done:false
+
+    });
+
+    input.value="";
+
+    saveTasks();
+
+    renderTasks();
+
 });
+
+/* ===== Enter新增 ===== */
+
+input.addEventListener("keypress",(e)=>{
+
+    if(e.key==="Enter"){
+
+        button.click();
+
+    }
+
+});
+
+/* ===== 儲存 ===== */
+
+function saveTasks(){
+
+    localStorage.setItem("lifeTasks",JSON.stringify(tasks));
+
+}
+
+/* ===== 五大卡 ===== */
+
+document.querySelectorAll(".card").forEach(card=>{
+
+    card.onclick=()=>{
+
+        alert(card.querySelector("h3").innerText+"\n\n功能開發中");
+
+    }
+
+});
+
+/* ===== 啟動 ===== */
+
+renderTasks();
