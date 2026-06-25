@@ -1,1 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
 
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>人生RPG｜喝水</title>
+
+<link rel="stylesheet" href="style.css?v=004">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<header class="hero">
+
+<div class="logo">💧</div>
+
+<h1>喝水</h1>
+
+<p class="slogan">
+
+每天一點點，
+
+累積健康每一天。
+
+</p>
+
+</header>
+
+<section class="profile-card">
+
+<div class="profile-avatar">👤</div>
+
+<div class="profile-info">
+
+<h2 id="nickname">載入中...</h2>
+
+<p class="level-title">今日喝水</p>
+
+<h3 id="todayWater">0 ml</h3>
+
+</div>
+
+</section>
+
+<section class="task-panel">
+
+<div class="section-title">
+
+<h2>快速紀錄</h2>
+
+</div>
+
+<div class="card-grid">
+
+<div class="card" id="water250">
+
+<div class="icon">🥛</div>
+
+<h3>+250 ml</h3>
+
+</div>
+
+<div class="card" id="water500">
+
+<div class="icon">🧴</div>
+
+<h3>+500 ml</h3>
+
+</div>
+
+<div class="card" id="water1000">
+
+<div class="icon">🚰</div>
+
+<h3>+1000 ml</h3>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="task-panel">
+
+<div class="section-title">
+
+<h2>今日目標</h2>
+
+</div>
+
+<h2 id="goalText">
+
+2000 ml
+
+</h2>
+
+<progress
+id="waterProgress"
+value="0"
+max="2000"
+style="width:100%;height:30px;">
+</progress>
+
+</section>
+
+<div style="text-align:center;margin-top:40px;">
+
+<button onclick="location.href='health.html'">
+
+← 返回健康世界
+
+</button>
+
+</div>
+
+</div>
+
+<script src="water.js?v=004"></script>
+
+</body>
+
+</html>
