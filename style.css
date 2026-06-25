@@ -1,5 +1,6 @@
 /* ===================================
-   人生RPG v1.0 Alpha003
+   人生RPG v1.0 Alpha004.5
+   全站 UI 升級
 =================================== */
 
 /* ---------- 基本 ---------- */
@@ -26,39 +27,39 @@ body{
 
     width:92%;
 
-    max-width:1200px;
+    max-width:1280px;
 
     margin:auto;
 
-    padding:40px 20px 80px;
+    padding:50px 25px 100px;
 
 }
 
-/* ---------- 首頁 ---------- */
+/* ---------- Hero ---------- */
 
 .hero{
 
     text-align:center;
 
-    margin-bottom:40px;
+    margin-bottom:55px;
 
 }
 
 .logo{
 
-    font-size:72px;
+    font-size:84px;
 
-    margin-bottom:10px;
+    margin-bottom:15px;
 
 }
 
 .hero h1{
 
-    font-size:52px;
+    font-size:58px;
 
     color:#FFD86B;
 
-    margin-bottom:18px;
+    margin-bottom:20px;
 
 }
 
@@ -66,13 +67,13 @@ body{
 
     color:#C7D7EF;
 
-    font-size:18px;
+    font-size:22px;
 
     line-height:2;
 
 }
 
-/* ---------- 人生資訊 ---------- */
+/* ---------- 玩家資訊 ---------- */
 
 .profile-card{
 
@@ -80,29 +81,29 @@ body{
 
     align-items:center;
 
-    gap:24px;
+    gap:30px;
 
-    padding:28px;
+    padding:35px;
 
-    margin-bottom:35px;
+    margin-bottom:45px;
 
     background:rgba(255,255,255,.08);
 
-    backdrop-filter:blur(15px);
+    backdrop-filter:blur(18px);
 
-    border-radius:20px;
+    border-radius:28px;
 
     border:1px solid rgba(255,255,255,.08);
 
-    box-shadow:0 0 30px rgba(0,170,255,.18);
+    box-shadow:0 0 35px rgba(0,170,255,.18);
 
 }
 
 .profile-avatar{
 
-    width:90px;
+    width:110px;
 
-    height:90px;
+    height:110px;
 
     border-radius:50%;
 
@@ -114,7 +115,7 @@ body{
 
     align-items:center;
 
-    font-size:42px;
+    font-size:54px;
 
 }
 
@@ -126,9 +127,9 @@ body{
 
 .profile-info h2{
 
-    font-size:30px;
+    font-size:34px;
 
-    margin-bottom:8px;
+    margin-bottom:10px;
 
 }
 
@@ -136,49 +137,55 @@ body{
 
     color:#AFC6E9;
 
+    font-size:18px;
+
 }
 
 #life-level{
 
     color:#FFD86B;
 
-    font-size:32px;
+    font-size:36px;
 
-    margin:10px 0;
+    margin:12px 0;
 
 }
 
 .life-quote{
 
-    margin-top:15px;
+    margin-top:20px;
 
-    padding:15px;
+    padding:22px;
 
-    border-left:4px solid #FFD86B;
+    border-left:5px solid #FFD86B;
 
     background:rgba(255,255,255,.05);
 
-    border-radius:10px;
+    border-radius:18px;
 
     color:#D7E4F8;
 
+    font-size:18px;
+
+    line-height:1.9;
+
 }
 
-/* ---------- 區塊標題 ---------- */
+/* ---------- 區塊 ---------- */
 
 .section-title{
 
     text-align:center;
 
-    margin-bottom:25px;
+    margin-bottom:35px;
 
 }
 
 .section-title h2{
 
-    font-size:34px;
+    font-size:38px;
 
-    margin-bottom:10px;
+    margin-bottom:12px;
 
 }
 
@@ -186,90 +193,105 @@ body{
 
     color:#AFC6E9;
 
+    font-size:18px;
+
 }
 
-/* ---------- 今日任務 ---------- */
+/* ---------- 共用卡片 ---------- */
 
 .task-panel{
 
     background:rgba(255,255,255,.08);
 
-    backdrop-filter:blur(15px);
+    backdrop-filter:blur(18px);
 
-    border-radius:20px;
+    border-radius:28px;
 
-    padding:30px;
+    padding:40px;
 
-    margin-bottom:40px;
+    margin-bottom:45px;
 
     border:1px solid rgba(255,255,255,.08);
 
 }
 
+/* ---------- 輸入區 ---------- */
+
 .task-input{
 
     display:flex;
 
-    gap:12px;
+    gap:20px;
 
-    margin-bottom:25px;
+    margin-bottom:30px;
+
+    width:100%;
 
 }
 
-#taskInput{
+input{
 
-    flex:1;
+    width:100%;
 
-    padding:14px 18px;
+    height:64px;
+
+    padding:18px 22px;
 
     border:none;
 
-    border-radius:12px;
+    border-radius:18px;
 
     outline:none;
 
-    font-size:16px;
+    font-size:20px;
+
+    background:#ffffff;
+
+    color:#222;
 
 }
 
-#addTask{
+input::placeholder{
 
-    padding:14px 24px;
+    color:#999;
+
+}
+
+button{
+
+    width:100%;
+
+    height:64px;
 
     border:none;
 
-    border-radius:12px;
+    border-radius:18px;
 
     background:#355CFF;
 
     color:white;
 
+    font-size:20px;
+
+    font-weight:bold;
+
     cursor:pointer;
 
-    font-size:16px;
-
-    transition:.3s;
+    transition:.25s;
 
 }
 
-#addTask:hover{
+button:hover{
 
     background:#244BEE;
 
-    transform:translateY(-2px);
+    transform:translateY(-3px);
 
-}
-
-#taskList{
-
-    list-style:none;
-
-}
-/* ---------- 五大人生 ---------- */
+   /* ---------- 五大世界 ---------- */
 
 .world-section{
 
-    margin-bottom:40px;
+    margin-bottom:50px;
 
 }
 
@@ -277,9 +299,9 @@ body{
 
     display:grid;
 
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 
-    gap:25px;
+    gap:30px;
 
 }
 
@@ -287,19 +309,29 @@ body{
 
     background:rgba(255,255,255,.08);
 
-    backdrop-filter:blur(15px);
+    backdrop-filter:blur(18px);
 
-    border-radius:20px;
+    border-radius:28px;
 
-    padding:28px;
+    padding:35px;
+
+    min-height:220px;
 
     text-align:center;
 
     cursor:pointer;
 
-    transition:.3s;
+    transition:.25s;
 
     border:1px solid rgba(255,255,255,.08);
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
 
 }
 
@@ -307,23 +339,29 @@ body{
 
     transform:translateY(-8px);
 
-    box-shadow:0 0 35px rgba(0,180,255,.35);
+    box-shadow:0 0 40px rgba(0,180,255,.35);
+
+}
+
+.card:active{
+
+    transform:scale(.98);
 
 }
 
 .icon{
 
-    font-size:48px;
+    font-size:64px;
 
-    margin-bottom:15px;
+    margin-bottom:20px;
 
 }
 
 .card h3{
 
-    font-size:24px;
+    font-size:30px;
 
-    margin-bottom:10px;
+    margin-bottom:15px;
 
 }
 
@@ -331,33 +369,55 @@ body{
 
     color:#C7D7EF;
 
-    line-height:1.7;
+    line-height:1.8;
+
+    font-size:18px;
 
 }
 
 /* ---------- 任務清單 ---------- */
 
-#taskList li{
+#taskList,
+
+#exerciseList,
+
+#weightList{
+
+    list-style:none;
+
+}
+
+#taskList li,
+
+#exerciseList li,
+
+#weightList li{
 
     display:flex;
 
     align-items:center;
 
-    gap:12px;
+    gap:15px;
 
-    padding:14px 18px;
+    padding:18px 22px;
 
-    margin-bottom:12px;
+    margin-bottom:15px;
 
-    border-radius:12px;
+    border-radius:18px;
 
     background:rgba(255,255,255,.05);
+
+    font-size:18px;
 
     transition:.25s;
 
 }
 
-#taskList li:hover{
+#taskList li:hover,
+
+#exerciseList li:hover,
+
+#weightList li:hover{
 
     background:rgba(255,255,255,.10);
 
@@ -365,11 +425,9 @@ body{
 
 #taskList input[type="checkbox"]{
 
-    width:20px;
+    width:24px;
 
-    height:20px;
-
-    cursor:pointer;
+    height:24px;
 
 }
 
@@ -381,35 +439,35 @@ body{
 
 }
 
-/* ---------- 顏色 ---------- */
+/* ---------- 五大世界顏色 ---------- */
 
 .wealth{
 
-    border-left:5px solid #FFD54A;
+    border-left:6px solid #FFD54A;
 
 }
 
 .life{
 
-    border-left:5px solid #FF8A65;
+    border-left:6px solid #FF8A65;
 
 }
 
 .health{
 
-    border-left:5px solid #66BB6A;
+    border-left:6px solid #66BB6A;
 
 }
 
 .growth{
 
-    border-left:5px solid #42A5F5;
+    border-left:6px solid #42A5F5;
 
 }
 
 .explore{
 
-    border-left:5px solid #AB47BC;
+    border-left:6px solid #AB47BC;
 
 }
 
@@ -417,7 +475,7 @@ body{
 
 .today-message{
 
-    margin-top:45px;
+    margin-top:60px;
 
     text-align:center;
 
@@ -425,9 +483,9 @@ body{
 
 .today-message h2{
 
-    margin-bottom:12px;
+    font-size:34px;
 
-    font-size:30px;
+    margin-bottom:15px;
 
 }
 
@@ -435,7 +493,9 @@ body{
 
     color:#AFC6E9;
 
-    line-height:1.8;
+    line-height:2;
+
+    font-size:20px;
 
 }
 
@@ -443,13 +503,13 @@ body{
 
 footer{
 
-    margin-top:60px;
+    margin-top:70px;
 
     text-align:center;
 
     color:#90A4C3;
 
-    font-size:15px;
+    font-size:16px;
 
 }
 
@@ -457,23 +517,11 @@ footer{
 
 @media(max-width:768px){
 
-    .profile-card{
+    .container{
 
-        flex-direction:column;
+        width:95%;
 
-        text-align:center;
-
-    }
-
-    .task-input{
-
-        flex-direction:column;
-
-    }
-
-    #addTask{
-
-        width:100%;
+        padding:25px 15px 60px;
 
     }
 
@@ -483,16 +531,81 @@ footer{
 
     }
 
-    .section-title h2{
+    .logo{
 
-        font-size:28px;
+        font-size:64px;
+
+    }
+
+    .profile-card{
+
+        flex-direction:column;
+
+        text-align:center;
+
+        padding:25px;
+
+    }
+
+    .profile-avatar{
+
+        width:90px;
+
+        height:90px;
+
+        font-size:46px;
+
+    }
+
+    .task-input{
+
+        flex-direction:column;
+
+    }
+
+    input{
+
+        height:58px;
+
+        font-size:18px;
+
+    }
+
+    button{
+
+        height:58px;
+
+        font-size:18px;
 
     }
 
     .card{
 
-        padding:22px;
+        min-height:180px;
+
+        padding:28px;
 
     }
+
+    .icon{
+
+        font-size:52px;
+
+    }
+
+    .card h3{
+
+        font-size:24px;
+
+    }
+
+    .card p{
+
+        font-size:16px;
+
+    }
+
+}
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
 
 }
