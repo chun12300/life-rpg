@@ -2,11 +2,15 @@
 <html lang="zh-TW">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>人生RPG</title>
 
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
@@ -24,13 +28,17 @@
         <h1>人生RPG</h1>
 
         <p class="slogan">
+
             人生，不需要打怪。<br>
+
             而是超越昨天的自己。<br><br>
 
             改變，就是當下。<br><br>
 
             讓自己變得更好，<br>
+
             才是人生真正的任務。
+
         </p>
 
     </header>
@@ -40,103 +48,198 @@
     <section class="profile-card">
 
         <div class="profile-avatar">
+
             👤
+
         </div>
 
         <div class="profile-info">
 
             <h2 id="nickname">
+
                 歡迎來到人生RPG
+
             </h2>
 
             <p class="level-title">
+
                 人生 Level
+
             </p>
 
             <h3 id="life-level">
+
                 Lv.1
+
             </h3>
+
+            <div class="life-quote">
+
+                <p id="lifeQuote">
+
+                    人生，不需要打怪。
+
+                </p>
+
+            </div>
 
         </div>
 
     </section>
 
-    <!-- ===== 今日主題 ===== -->
+    <!-- ===== 今日任務 ===== -->
 
-    <section class="today">
+    <section class="task-panel">
+
+        <div class="section-title">
+
+            <h2>📝 今日任務</h2>
+
+            <p>
+
+                今天，你想先完成哪一件事？
+
+            </p>
+
+        </div>
+
+        <div class="task-input">
+
+            <input
+                type="text"
+                id="taskInput"
+                placeholder="輸入今天想完成的事情..."
+            >
+
+            <button id="addTask">
+
+                新增
+
+            </button>
+
+        </div>
+
+        <ul id="taskList">
+
+        </ul>
+
+    </section>
+        <!-- ===== 五大人生領域 ===== -->
+
+    <section class="world-section">
+
+        <div class="section-title">
+
+            <h2>🌏 人生領域</h2>
+
+            <p>
+
+                每一個選擇，都是讓自己更好的一步。
+
+            </p>
+
+        </div>
+
+        <section class="card-grid">
+
+            <div class="card wealth">
+
+                <div class="icon">💰</div>
+
+                <h3>財富</h3>
+
+                <p>
+
+                    建立更穩定的未來。
+
+                </p>
+
+            </div>
+
+            <div class="card life">
+
+                <div class="icon">🍽️</div>
+
+                <h3>生活</h3>
+
+                <p>
+
+                    好好生活，也好好享受每一天。
+
+                </p>
+
+            </div>
+
+            <div class="card health">
+
+                <div class="icon">💪</div>
+
+                <h3>健康</h3>
+
+                <p>
+
+                    身體，是陪伴自己最久的夥伴。
+
+                </p>
+
+            </div>
+
+            <div class="card growth">
+
+                <div class="icon">🧠</div>
+
+                <h3>成長</h3>
+
+                <p>
+
+                    每天比昨天更進步一點。
+
+                </p>
+
+            </div>
+
+            <div class="card explore">
+
+                <div class="icon">🗺️</div>
+
+                <h3>探索</h3>
+
+                <p>
+
+                    世界很大，也別忘了探索自己。
+
+                </p>
+
+            </div>
+
+        </section>
+
+    </section>
+
+    <!-- ===== 今日提醒 ===== -->
+
+    <section class="today-message">
 
         <h2>
-            今天，你想先完成哪一件事？
+
+            今天，就是改變的開始。
+
         </h2>
 
         <p>
-            選擇一個人生領域，開始今天的任務。
+
+            不需要一次完成很多事，只要完成今天最重要的一件事。
+
         </p>
 
-    </section>
-
-    <!-- ===== 五大人生領域 ===== -->
-
-    <section class="card-grid">
-
-        <div class="card wealth">
-            <div class="icon">💰</div>
-
-            <h3>財富</h3>
-
-            <p>
-                建立更穩定的未來。
-            </p>
-        </div>
-
-        <div class="card life">
-            <div class="icon">🍽️</div>
-
-            <h3>生活</h3>
-
-            <p>
-                好好生活，也好好享受每一天。
-            </p>
-        </div>
-
-        <div class="card health">
-            <div class="icon">💪</div>
-
-            <h3>健康</h3>
-
-            <p>
-                身體，是陪伴自己最久的夥伴。
-            </p>
-        </div>
-
-        <div class="card growth">
-            <div class="icon">🧠</div>
-
-            <h3>成長</h3>
-
-            <p>
-                每天比昨天更進步一點。
-            </p>
-        </div>
-
-        <div class="card explore">
-            <div class="icon">🗺️</div>
-
-            <h3>探索</h3>
-
-            <p>
-                世界很大，也別忘了探索自己。
-            </p>
-        </div>
-
-    </section>
-
-    <!-- ===== 頁尾 ===== -->
+    </section>    <!-- ===== 頁尾 ===== -->
 
     <footer>
 
         <p>
-            今天，就是改變的開始。
+
+            人生RPG Alpha003
+
         </p>
 
     </footer>
@@ -146,4 +249,5 @@
 <script src="script.js"></script>
 
 </body>
+
 </html>
