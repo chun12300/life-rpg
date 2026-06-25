@@ -1,3 +1,5 @@
+/* ========= 基本設定 ========= */
+
 *{
     margin:0;
     padding:0;
@@ -8,57 +10,67 @@ body{
 
     font-family:"Microsoft JhengHei",sans-serif;
 
-    background:linear-gradient(180deg,#091322,#111d33);
+    background:linear-gradient(180deg,#081221,#0f1d34);
 
-    color:white;
+    color:#fff;
 
     min-height:100vh;
 
 }
 
+/* ========= 容器 ========= */
+
 .container{
 
-    width:90%;
+    width:92%;
 
-    max-width:1100px;
+    max-width:1200px;
 
     margin:auto;
 
-    padding:40px 20px;
+    padding:40px 20px 80px;
 
 }
 
-header{
+/* ========= Hero ========= */
+
+.hero{
 
     text-align:center;
 
-    margin-bottom:40px;
+    margin-bottom:45px;
 
 }
 
 .logo{
 
-    font-size:70px;
-
-    margin-bottom:15px;
-
-}
-
-header h1{
-
-    font-size:48px;
+    font-size:72px;
 
     margin-bottom:10px;
 
 }
 
-header p{
+.hero h1{
 
-    color:#9cb7ff;
+    font-size:52px;
+
+    color:#FFD86B;
+
+    margin-bottom:12px;
 
 }
 
-.player{
+.subtitle{
+
+    color:#9DB7D9;
+
+    font-size:18px;
+
+}
+
+/* ========= 玩家資訊 ========= */
+
+.player-card{
 
     display:flex;
 
@@ -66,27 +78,29 @@ header p{
 
     gap:20px;
 
-    background:#182540;
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:22px;
 
     padding:25px;
 
-    border-radius:20px;
+    margin-bottom:45px;
 
-    margin-bottom:40px;
-
-    box-shadow:0 0 25px rgba(0,150,255,.2);
+    box-shadow:0 0 25px rgba(0,150,255,.18);
 
 }
 
 .avatar{
 
-    width:80px;
+    width:90px;
 
-    height:80px;
+    height:90px;
 
     border-radius:50%;
 
-    background:#355cff;
+    background:#355CFF;
 
     display:flex;
 
@@ -94,39 +108,103 @@ header p{
 
     align-items:center;
 
-    font-size:40px;
+    font-size:42px;
 
 }
 
-.world h2{
+.player-info h2{
 
-    margin-bottom:25px;
+    margin-bottom:8px;
 
 }
 
-.cards{
+.player-info p{
+
+    color:#BDD0F0;
+
+    margin-bottom:12px;
+
+}
+
+.exp-bar{
+
+    width:240px;
+
+    height:12px;
+
+    background:#23334D;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    margin-bottom:8px;
+
+}
+
+.exp-fill{
+
+    width:15%;
+
+    height:100%;
+
+    background:linear-gradient(90deg,#00CFFF,#00FF95);
+
+}
+
+/* ========= 世界標題 ========= */
+
+.world-title{
+
+    text-align:center;
+
+    margin-bottom:35px;
+
+}
+
+.world-title h2{
+
+    font-size:36px;
+
+    margin-bottom:10px;
+
+}
+
+.world-title p{
+
+    color:#AFC6E9;
+
+}
+
+/* ========= 卡片 ========= */
+
+.card-grid{
 
     display:grid;
 
     grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 
-    gap:20px;
+    gap:25px;
 
 }
 
 .card{
 
-    background:#182540;
+    background:rgba(255,255,255,.08);
 
-    padding:25px;
+    backdrop-filter:blur(15px);
 
-    border-radius:18px;
+    border-radius:20px;
 
-    transition:.3s;
+    padding:28px;
+
+    text-align:center;
+
+    transition:.35s;
 
     cursor:pointer;
 
-    box-shadow:0 0 15px rgba(0,100,255,.15);
+    border:1px solid rgba(255,255,255,.08);
 
 }
 
@@ -134,30 +212,106 @@ header p{
 
     transform:translateY(-8px);
 
-    box-shadow:0 0 30px rgba(0,180,255,.5);
+    box-shadow:0 0 35px rgba(0,180,255,.45);
 
 }
 
-.card{
+.icon{
 
-    font-size:40px;
+    font-size:48px;
 
-    text-align:center;
+    margin-bottom:15px;
 
 }
 
 .card h3{
 
-    margin-top:15px;
-
     margin-bottom:10px;
+
+    font-size:24px;
 
 }
 
 .card p{
 
-    color:#b8c8ff;
+    color:#BFD2F0;
 
-    font-size:15px;
+    line-height:1.7;
+
+}
+
+/* ========= 每張卡不同顏色 ========= */
+
+.investment{
+
+    border-left:5px solid #FFD54A;
+
+}
+
+.food{
+
+    border-left:5px solid #FF8A65;
+
+}
+
+.meme{
+
+    border-left:5px solid #AB47BC;
+
+}
+
+.fitness{
+
+    border-left:5px solid #66BB6A;
+
+}
+
+.map{
+
+    border-left:5px solid #42A5F5;
+
+}
+
+/* ========= Footer ========= */
+
+footer{
+
+    text-align:center;
+
+    margin-top:60px;
+
+    color:#90A4C3;
+
+}
+
+/* ========= 手機版 ========= */
+
+@media(max-width:768px){
+
+.player-card{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+.exp-bar{
+
+    width:100%;
+
+}
+
+.hero h1{
+
+    font-size:40px;
+
+}
+
+.logo{
+
+    font-size:56px;
+
+}
 
 }
