@@ -1,22 +1,156 @@
-<div class="card-grid">
-    <div class="card" onclick="location.href='exercise.html'">
-    ...
-    </div>
+<!DOCTYPE html>
+<html lang="zh-TW">
 
-    <div class="card" onclick="location.href='weight.html'">
-    ...
-    </div>
+<head>
 
-    <div class="card" onclick="location.href='water.html'">
-    ...
-    </div>
+    <meta charset="UTF-8">
 
-    <div class="card" onclick="location.href='sleep.html'">
-    ...
-    </div>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <div class="card" onclick="location.href='bmi.html'">
-    ...
+    <title>人生RPG｜健康世界</title>
+
+    <link rel="stylesheet" href="style.css?v=004">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <header class="hero">
+
+        <div class="logo">💪</div>
+
+        <h1>健康世界</h1>
+
+        <p class="slogan">
+
+            今天照顧自己的身體，<br>
+
+            就是對未來最好的投資。
+
+        </p>
+
+    </header>
+
+    <section class="profile-card">
+
+        <div class="profile-avatar">
+
+            👤
+
+        </div>
+
+        <div class="profile-info">
+
+            <h2 id="nickname">
+
+                載入中...
+
+            </h2>
+
+            <p class="level-title">
+
+                人生 Level
+
+            </p>
+
+            <h3 id="life-level">
+
+                Lv.1
+
+            </h3>
+
+        </div>
+
+    </section>
+
+    <section class="world-section">
+
+        <div class="section-title">
+
+            <h2>今天想照顧哪一個部分？</h2>
+
+            <p>選擇一個項目開始今天的健康任務。</p>
+
+        </div>
+
+        <div class="card-grid">
+
+            <div class="card" onclick="location.href='exercise.html'">
+
+                <div class="icon">🏋️</div>
+
+                <h3>運動</h3>
+
+                <p>開始今天的訓練。</p>
+
+            </div>
+
+            <div class="card" onclick="location.href='weight.html'">
+
+                <div class="icon">⚖️</div>
+
+                <h3>體重</h3>
+
+                <p>記錄目前體重。</p>
+
+            </div>
+
+            <div class="card" onclick="location.href='water.html'">
+
+                <div class="icon">💧</div>
+
+                <h3>喝水</h3>
+
+                <p>記錄今天喝水量。</p>
+
+            </div>
+
+            <div class="card" onclick="location.href='sleep.html'">
+
+                <div class="icon">😴</div>
+
+                <h3>睡眠</h3>
+
+                <p>記錄睡眠時間。</p>
+
+            </div>
+
+            <div class="card" onclick="location.href='bmi.html'">
+
+                <div class="icon">📏</div>
+
+                <h3>BMI</h3>
+
+                <p>計算身體質量指數。</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <div style="text-align:center;margin-top:50px;">
+
+        <button onclick="location.href='index.html'">
+
+            ← 返回首頁
+
+        </button>
+
     </div>
 
 </div>
+
+<script>
+
+const nickname = localStorage.getItem("lifeNickname") || "努力成長的大叔";
+
+document.getElementById("nickname").innerText = nickname;
+
+</script>
+
+</body>
+
+</html>
